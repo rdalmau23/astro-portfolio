@@ -1,5 +1,5 @@
 export const info = {
-  baseUrl: "https://astro-portfolio-uzair.vercel.app",
+  baseUrl: "https://laracuevas.netlify.app",
   name: "Lara Cuevas",
   jobDescription: "Web Developer",
   about: `(2003, Barcelona, Spain) soy una diseñadora y estilista. Graduada en ESDI by EATM en Diseño de Moda y Estilismo de Indumentaria en 2023. 
