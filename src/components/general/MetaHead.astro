@@ -10,7 +10,8 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon-light.ico" media="(prefers-color-scheme: light)" />
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" media="(prefers-color-scheme: dark)" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ilustracion_sin_titulo-1-2.webp" />
 <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/ilustracion_sin_titulo-1-2.webp" />
 <link rel="icon" type="image/webp" sizes="16x16" href="/assets/images/ilustracion_sin_titulo-1-2.webp" />
