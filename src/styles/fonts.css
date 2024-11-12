@@ -1,0 +1,37 @@
+/* Creepster - Gótico */
+@font-face {
+  font-family: "Creepster";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/Creepster/Creepster-Regular.ttf) format("truetype");
+}
+
+/* Black Ops One - Rebelde */
+@font-face {
+  font-family: "Black Ops One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/BlackOpsOne/BlackOpsOne-Regular.ttf) format("truetype");
+}
+
+/* Aquí puedes continuar con más variaciones si es necesario, por ejemplo: */
+
+/* Creepster */
+@font-face {
+  font-family: "Creepster";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/assets/fonts/Creepster/Creepster-Thin.ttf) format("truetype");
+}
+
+/* Black Ops One */
+@font-face {
+  font-family: "Black Ops One";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/assets/fonts/BlackOpsOne/BlackOpsOne-Bold.ttf) format("truetype");
+}
