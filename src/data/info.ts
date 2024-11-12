@@ -35,9 +35,9 @@ export const info = {
   ],
 
   socialMedia: {
-    twitter: "https://twitter.com/Uzzii_21",
-    email: "mailto:uzairahmed@74372gmail.com",
-    linkedin: "https://www.linkedin.com/in/uzzii21/",
+    twitter: "https://twitter.com/",
+    email: "mailto: ",
+    linkedin: "https://www.linkedin.com/",
   },
 
   projects: [
