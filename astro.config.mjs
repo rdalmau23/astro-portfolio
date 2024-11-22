@@ -2,8 +2,8 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react"; // Integración de React de Astro
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://astro-portfolio-uzair.vercel.app",
   integrations: [
@@ -15,5 +15,6 @@ export default defineConfig({
       entryLimit: 10000,
     }),
     robotsTxt(),
+    react() // Asegúrate de que la integración de React está incluida
   ],
 });
