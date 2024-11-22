@@ -35,9 +35,9 @@ export const info = {
   ],
 
   socialMedia: {
-    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/laraacuevaass",
     email: "mailto: ",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/lara-cuevas-0169a1267/",
   },
 
   projects: [
