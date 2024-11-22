@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export default function ProjectCardModal({ thumbnails, title }) {
   const [showModal, setShowModal] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showThumbnails, setShowThumbnails] = useState(false); // Nuevo estado
 
   const openModal = (index) => {
     setShowModal(true);
@@ -15,18 +16,25 @@ export default function ProjectCardModal({ thumbnails, title }) {
 
   const prevImage = () => setActiveIndex((activeIndex - 1 + thumbnails.length) % thumbnails.length);
 
+  const toggleThumbnails = () => setShowThumbnails(!showThumbnails); // Función para alternar miniaturas
+
   return (
     <div>
       <article className="w-full max-h-[25rem] overflow-hidden relative group">
         <div className="relative" onClick={() => openModal(0)}>
           <img
             src={thumbnails[0]}
-            className="w-full h-full object-cover transition duration-[1.5s] group-hover:opacity-0"
+            className="w-full h-full object-cover transition duration-[1.5s]"
             loading="lazy"
             alt={`${title} cover image`}
           />
 
-          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div
+            className={`absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-500 ${
+              showThumbnails ? 'opacity-100' : 'group-hover:opacity-100'
+            }`} // Condición para mostrar miniaturas
+            onClick={toggleThumbnails} // Alternar miniaturas al hacer clic
+          >
             <div className="grid grid-cols-3 gap-2">
               {thumbnails.map((thumbnail, index) => (
                 <img
