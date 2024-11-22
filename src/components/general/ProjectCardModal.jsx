@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export default function ProjectCardModal({ thumbnails, title }) {
   const [showModal, setShowModal] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [showThumbnails, setShowThumbnails] = useState(false); // Nuevo estado
 
   const openModal = (index) => {
     setShowModal(true);
@@ -16,11 +15,9 @@ export default function ProjectCardModal({ thumbnails, title }) {
 
   const prevImage = () => setActiveIndex((activeIndex - 1 + thumbnails.length) % thumbnails.length);
 
-  const toggleThumbnails = () => setShowThumbnails(!showThumbnails); // Función para alternar miniaturas
-
   return (
     <div>
-      <article className="w-full max-h-[25rem] overflow-hidden relative group">
+      <article className="w-full max-h-[25rem] overflow-hidden relative">
         <div className="relative" onClick={() => openModal(0)}>
           <img
             src={thumbnails[0]}
@@ -28,33 +25,11 @@ export default function ProjectCardModal({ thumbnails, title }) {
             loading="lazy"
             alt={`${title} cover image`}
           />
-
-          <div
-            className={`absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-500 ${
-              showThumbnails ? 'opacity-100' : 'group-hover:opacity-100'
-            }`} // Condición para mostrar miniaturas
-            onClick={toggleThumbnails} // Alternar miniaturas al hacer clic
-          >
-            <div className="grid grid-cols-3 gap-2">
-              {thumbnails.map((thumbnail, index) => (
-                <img
-                  key={index}
-                  src={thumbnail}
-                  className="w-full h-auto object-cover transition-transform transform hover:scale-105 cursor-pointer"
-                  loading="lazy"
-                  alt={`${title} image ${index + 1}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    openModal(index);
-                  }}
-                />
-              ))}
-            </div>
-          </div>
         </div>
 
-        <div className="absolute w-full bottom-0 left-0 backdrop-blur-md text-white bg-black/50 p-4 translate-y-full group-hover:translate-y-0 transition duration-700">
-          <h3 className="mr-2 text-xl">{title}</h3>
+        {/* Título visible siempre */}
+        <div className="absolute w-full bottom-0 left-0 backdrop-blur-md text-white bg-black/50 p-4">
+          <h3 className="text-xl">{title}</h3>
         </div>
       </article>
 
